@@ -1,0 +1,19 @@
+<input type="text" id="inputBox" placeholder="Enter text">
+<button onclick="createButton()">Create Button</button>
+<div id="buttonContainer"></div>
+
+
+<script>
+function createButton() {
+    var inputValue = document.getElementById('inputBox').value; // 获取输入框的值
+    var newButton = document.createElement('button'); // 创建一个新的按钮元素
+    newButton.textContent = inputValue; // 设置按钮的文本内容为输入框的值
+    newButton.onclick = function(){
+        location.href = this.textContent
+    }
+    //newButton.target = '_blank'; 
+    document.getElementById('buttonContainer').appendChild(newButton); // 将按钮添加到容器中
+    document.getElementById('buttonContainer').appendChild(document.createElement("br"))
+}
+
+</script>
